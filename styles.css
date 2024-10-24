@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #2c3e50;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.branding img {
+  max-width: 150px;
+}
+
+main {
+  margin: 20px;
+}
+
+h1, h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.checklist {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checklist-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.progress-section {
+  margin-top: 40px;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #27ae60;
+  height: 100%;
+  width: 0;
+}
+
+#progress-text {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 40px;
+}
