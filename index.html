@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local SEO Checklist</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local SEO Checklist | Gurkha Technology</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="branding">
-      <img src="your-logo.png" alt="Agency Logo">
-      <h1>Local SEO Checklist for Small Businesses</h1>
-    </div>
-  </header>
+    <header>
+        <img src="your-logo.png" alt="Gurkha Technology Logo" class="logo">
+        <h1>Local SEO Checklist for Small Businesses</h1>
+        <p>Use this checklist to ensure your business is optimized for local SEO.</p>
+    </header>
+    <main>
+        <section id="checklist">
+            <h2>SEO Checklist</h2>
+            <p>Select each item as you complete it. You’ll receive tips for any unfinished tasks!</p>
+            <ul id="checklist-items">
+                <li>
+                    <input type="checkbox" id="gmb" onclick="checkTask('gmb')">
+                    <label for="gmb">Claim and optimize your Google My Business profile</label>
+                    <div class="feedback" id="gmb-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="local-keywords" onclick="checkTask('local-keywords')">
+                    <label for="local-keywords">Research and include local keywords in your website content</label>
+                    <div class="feedback" id="local-keywords-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="nap" onclick="checkTask('nap')">
+                    <label for="nap">Ensure NAP (Name, Address, Phone) consistency across all online listings</label>
+                    <div class="feedback" id="nap-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="reviews" onclick="checkTask('reviews')">
+                    <label for="reviews">Manage and respond to customer reviews regularly</label>
+                    <div class="feedback" id="reviews-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="local-links" onclick="checkTask('local-links')">
+                    <label for="local-links">Get backlinks from local websites and directories</label>
+                    <div class="feedback" id="local-links-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="website-mobile" onclick="checkTask('website-mobile')">
+                    <label for="website-mobile">Make sure your website is mobile-friendly</label>
+                    <div class="feedback" id="website-mobile-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="social-media" onclick="checkTask('social-media')">
+                    <label for="social-media">Optimize and link your social media profiles</label>
+                    <div class="feedback" id="social-media-feedback"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id="local-schema" onclick="checkTask('local-schema')">
+                    <label for="local-schema">Implement local schema markup on your website</label>
+                    <div class="feedback" id="local-schema-feedback"></div>
+                </li>
+            </ul>
+        </section>
+        <section id="progress">
+            <h2>Progress</h2>
+            <div class="progress-bar" id="progress-bar">
+                <span id="progress-text">0% complete</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Powered by Gurkha Technology</p>
+    </footer>
 
-  <main>
-    <section class="checklist">
-      <h2>Local SEO Checklist</h2>
-      <form id="seo-checklist">
-        <div class="checklist-item">
-          <input type="checkbox" id="gmb-optimization" name="gmb-optimization">
-          <label for="gmb-optimization">Optimize Google My Business Profile</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="local-keywords" name="local-keywords">
-          <label for="local-keywords">Identify and Use Local Keywords</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="review-management" name="review-management">
-          <label for="review-management">Manage Reviews Effectively</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="nap-consistency" name="nap-consistency">
-          <label for="nap-consistency">Ensure NAP (Name, Address, Phone) Consistency</label>
-        </div>
-      </form>
-    </section>
-
-    <section class="progress-section">
-      <h2>Progress</h2>
-      <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-      </div>
-      <p id="progress-text">0% completed</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Powered by Gurkha Technology</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
