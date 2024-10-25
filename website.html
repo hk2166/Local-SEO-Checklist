@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #588157;
+}
+
+header {
+    background-color: #004080;
+    color: #ffc2d1;
+    padding: 20px;
+    text-align: center;
+    border: 5px dotted;
+    border-color: black;
+}
+
+.logo {
+    width: 100px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 20px;
+    border: 5px groove;
+    border-color: pink;
+}
+
+#checklist, #tips-section, #progress {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+label {
+    margin-left: 8px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #f9844a;
+}
+
+.progress-bar {
+    background-color: #720026;
+    border-radius: 20px;
+    height: 25px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#progress-bar {
+    background-color: #4CAF50;
+    height: 100%;
+    text-align: center;
+    color: #720026;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* Style for tips section */
+#tips-section {
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+#tips-content p {
+    background-color: #720026;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #333;
+}
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local SEO Checklist | Gurkha Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="your-logo.png" alt="Gurkha Technology Logo" class="logo">
+        <h1>Local SEO Checklist for Small Businesses</h1>
+        <p>Use this checklist to track your progress and get personalized SEO tips.</p>
+    </header>
+
+    <main>
+        <!-- Part 1: SEO Checklist -->
+        <section id="checklist">
+            <h2>SEO Checklist</h2>
+            <p>Mark the items you’ve already completed.</p>
+            <ul id="checklist-items">
+                <li>
+                    <input type="checkbox" id="gmb" onclick="checkTask('gmb')">
+                    <label for="gmb">Claim and optimize your Google My Business profile</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="local-keywords" onclick="checkTask('local-keywords')">
+                    <label for="local-keywords">Research and include local keywords in your website content</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="nap" onclick="checkTask('nap')">
+                    <label for="nap">Ensure NAP (Name, Address, Phone) consistency across all online listings</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="reviews" onclick="checkTask('reviews')">
+                    <label for="reviews">Manage and respond to customer reviews regularly</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="local-links" onclick="checkTask('local-links')">
+                    <label for="local-links">Get backlinks from local websites and directories</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="website-mobile" onclick="checkTask('website-mobile')">
+                    <label for="website-mobile">Make sure your website is mobile-friendly</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="social-media" onclick="checkTask('social-media')">
+                    <label for="social-media">Optimize and link your social media profiles</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="local-schema" onclick="checkTask('local-schema')">
+                    <label for="local-schema">Implement local schema markup on your website</label>
+                </li>
+            </ul>
+            <button onclick="showTips()">Get Tips</button>
+        </section>
+
+        <!-- Part 2: Personalized Tips - Hidden by Default -->
+        <section id="tips-section" style="display: none;">
+            <h2>Personalized SEO Tips</h2>
+            <div id="tips-content"></div>
+        </section>
+
+        <section id="progress">
+            <h2>Progress</h2>
+            <div class="progress-bar" id="progress-bar">
+                <span id="progress-text">0% complete</span>
+            </div>
+        </section>
+    </main>
+
+    <footer style="border: 8px solid; border-color: palevioletred;">
+        <p >Powered by Gurkha Technology</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
