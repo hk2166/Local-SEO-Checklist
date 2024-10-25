@@ -1,4 +1,3 @@
-// JavaScript for managing checklist progress and feedback
 const totalItems = 8;
 let completedItems = 0;
 
@@ -10,45 +9,48 @@ function updateProgress() {
 
 function checkTask(taskId) {
     const checkbox = document.getElementById(taskId);
-    const feedback = document.getElementById(`${taskId}-feedback`);
-
     if (checkbox.checked) {
         completedItems += 1;
-        feedback.innerText = "";  // Clear feedback if task is completed
     } else {
         completedItems -= 1;
-        // Provide feedback for unchecked items
-        switch (taskId) {
-            case 'gmb':
-                feedback.innerText = "Claiming and optimizing your Google My Business profile is crucial for local visibility.";
-                break;
-            case 'local-keywords':
-                feedback.innerText = "Including local keywords helps you rank better for location-specific searches.";
-                break;
-            case 'nap':
-                feedback.innerText = "Ensure your business name, address, and phone number are consistent across all platforms.";
-                break;
-            case 'reviews':
-                feedback.innerText = "Managing reviews helps build trust and improve your local search ranking.";
-                break;
-            case 'local-links':
-                feedback.innerText = "Backlinks from local sources boost your credibility and search presence.";
-                break;
-            case 'website-mobile':
-                feedback.innerText = "A mobile-friendly website is essential as most searches are done on mobile devices.";
-                break;
-            case 'social-media':
-                feedback.innerText = "Optimized social media profiles can drive local engagement and improve SEO.";
-                break;
-            case 'local-schema':
-                feedback.innerText = "Local schema markup helps search engines understand your business better.";
-                break;
-            default:
-                feedback.innerText = "";
-        }
     }
-
     updateProgress();
 }
 
-updateProgress(); // Initialize progress on page load
+function showTips() {
+    const tipsSection = document.getElementById("tips-section");
+    const tipsContent = document.getElementById("tips-content");
+    tipsContent.innerHTML = "";  // Clear any previous tips
+
+    // Check each item and provide feedback if unchecked
+    const tasks = [
+        { id: "gmb", tip: "Claim and optimize your Google My Business profile to boost visibility in local searches." },
+        { id: "local-keywords", tip: "Use local keywords in your website content to rank better for location-specific searches." },
+        { id: "nap", tip: "Ensure that your business name, address, and phone number (NAP) are consistent across all online listings." },
+        { id: "reviews", tip: "Managing and responding to reviews can increase trust and improve your local ranking." },
+        { id: "local-links", tip: "Build backlinks from local websites and directories to strengthen your local presence." },
+        { id: "website-mobile", tip: "A mobile-friendly website is essential for local SEO, as many users search on mobile devices." },
+        { id: "social-media", tip: "Optimize your social media profiles and link them to your website to drive local engagement." },
+        { id: "local-schema", tip: "Implementing local schema markup helps search engines understand your business location and services." }
+    ];
+
+    // Loop through tasks to find unchecked ones and display corresponding tips
+    let hasUnchecked = false;
+    tasks.forEach(task => {
+        const checkbox = document.getElementById(task.id);
+        if (!checkbox.checked) {
+            hasUnchecked = true;
+            const tip = document.createElement("p");
+            tip.innerText = task.tip;
+            tipsContent.appendChild(tip);
+        }
+    });
+
+    if (!hasUnchecked) {
+        tipsContent.innerHTML = "<p>Great job! You've completed all the recommended tasks for local SEO.</p>";
+    }
+
+    tipsSection.style.display = "block";
+}
+
+updateProgress();  // Initialize progress on page load

@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,7 +21,7 @@ h1, h2 {
     margin: 10px 0;
 }
 
-#checklist {
+#checklist, #tips-section, #progress {
     padding: 20px;
 }
 
@@ -39,11 +40,18 @@ label {
     margin-left: 8px;
 }
 
-.feedback {
-    color: #b30000;
-    font-size: 0.9em;
-    margin-left: 10px;
-    display: block;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 .progress-bar {
@@ -67,4 +75,18 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
+}
+
+/* Style for tips section */
+#tips-section {
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+#tips-content p {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #333;
 }
